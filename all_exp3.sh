@@ -2,9 +2,14 @@ GPU=$1
 TARGET_DATASET=$2
 
 WEIGHT_INIT_SAMPLES=0
-SEEDS=( 42 100 222 3456 5876 )
-MODELS=( "google/t5-xl-lm-adapt" "bigscience/T0_3B" "google/t5-base-lm-adapt")
-AUX_DATASETS=( "T0Mixture" "P3" )
+# SEEDS=( 42 100 222 3456 5876 )
+# SEEDS = (42)
+# MODELS=( "google/t5-xl-lm-adapt" "bigscience/T0_3B" "google/t5-base-lm-adapt")
+# MODELS = ("google/t5-xl-lm-adapt")
+# AUX_DATASETS=( "T0Mixture" "P3" )
+SEEDS=(42)
+MODELS=("google/t5-xl-lm-adapt")
+AUX_DATASETS=("T0Mixture")
 
 for SEED in ${SEEDS[@]}; do
     for AUX_DATASET in ${AUX_DATASETS[@]}; do

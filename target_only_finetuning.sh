@@ -69,33 +69,35 @@ target_only_train(){
 }
 
 TARGET_DATASETS=(
-    "anli-r1"
-    "anli-r2"
-    "anli-r3"
-    "cb"
+    # "anli-r1"
+    # "anli-r2"
+    # "anli-r3"
+    # "cb"
     "copa"
-    "h-swag"
-    "rte"
-    "story_cloze"
-    "wic"
-    "winogrande"
-    "wsc"
+    # "h-swag"
+    # "rte"
+    # "story_cloze"
+    # "wic"
+    # "winogrande"
+    # "wsc"
 )
 NUM_SHOTS=(
-    50
-    50
-    50
+    # 50
+    # 50
+    # 50
     32
-    32
-    20
-    32
-    70
-    32
-    50
-    32
+    # 32
+    # 20
+    # 32
+    # 70
+    # 32
+    # 50
+    # 32
 )
-LRS=( 3e-4 1e-4 )
-SEEDS=( 42 100 222 3456 5876 )
+# LRS=( 3e-4 1e-4 )
+LRS = (1e-4)
+# SEEDS=( 42 100 222 3456 5876 )
+SEEDS=(42)
 
 for i in "${!TARGET_DATASETS[@]}"; do
     TARGET_DATASET=${TARGET_DATASETS[$i]}
